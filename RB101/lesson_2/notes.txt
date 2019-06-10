@@ -1,0 +1,23 @@
+These are some definitions and examples in the Small Programs lesson in RB101
+
+Short circuiting - a concept for the && operator that allows all further expressions after the first false expression to be ignored, thus expediting the processing of a && statement.
+  
+  Short circuiting example: 
+  false && "true" < 5
+  => false  
+
+  In this example an ArgumentError will not be raised because the first expression is already false.
+
+---
+
+Truthiness - Thanks to Ruby being a very liberal language, any object that doesn't evaluate to false or nil can be considered truthy, this doesn't however guarantee the object will equal true.
+
+  Truthiness example:
+  num = 5
+  puts num ? true : false
+  => true
+
+  num == true
+  => false
+  
+  In this example 5 is "truthy" but not necessarily true.
