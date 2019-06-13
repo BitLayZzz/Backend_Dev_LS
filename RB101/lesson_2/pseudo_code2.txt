@@ -1,0 +1,15 @@
+2. Write a method in pseudo-code that takes an array of strings, and returns a string that is all those strings concatenated together
+
+START
+
+# given an array of strings called "string_arr"
+
+SET iterator == 0
+SET sentence = an empty string
+
+WHILE iterator <= size of string_arr
+  SET sentence += string_arr at space iterator
+
+READ sentence
+
+END

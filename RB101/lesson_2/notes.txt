@@ -21,3 +21,17 @@ Truthiness - Thanks to Ruby being a very liberal language, any object that doesn
   => false
   
   In this example 5 is "truthy" but not necessarily true.
+
+Pseudo-Code - away of formulating the logic of a program that we are preparing to write, that is language independent. In other words, one does not have to focus on the language syntax when writing "code" this way first.
+
+  KEY WORDS for Pseudo-Code
+  START - start of the program
+  SET - sets a variable we can use for later
+  GET - retrieve input from user
+  PRINT - displays output to user
+  READ - retrieve value from variable
+  IF/ELSE IF/ ELSE - show conditional branches in logic
+  WHILE - show looping logic
+  END - end of program 
+
+
