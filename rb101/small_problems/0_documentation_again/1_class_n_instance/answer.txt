@@ -1,0 +1,18 @@
+Task: Locate the ruby documentation for methods File::path and File#path.
+How are they different?
+
+File::path returns the string representation of the path. It is also a class method, which means it calls the method directly from the class
+
+File#path returns the pathname used to create file as a string. The # also indicates that his is an instance method. This means it calls the method for that specific instance/object that was created from the class File. 
+
+-- Launch School Solution --
+
+  - Know that class methods are called on the class, while instance methods are called on objects
+
+puts File.path('bin') 
+=> calls the class method File::path, since we're calling it on the File Class
+
+f = File.new('my-file.txt')
+puts f.path
+=> calls the instance method File#path, since we're calling it on an OBJECT of class File.
+   specifically, f.

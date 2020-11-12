@@ -1,1 +1,1 @@
-This is a repository containing my exercises for the Programming and BackendDevelopment portion of the Core Curriculum at Launch School. All the exercises are separated by Course and then by lesson. I hope some of you will find some of these exercises helpful.
+This is a repository containing my exercises for the Programming and Backend Development portion of the Core Curriculum at Launch School. All the exercises are separated by Course and then by lesson. I hope some of you will find some of these exercises helpful.

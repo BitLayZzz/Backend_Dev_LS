@@ -1,0 +1,30 @@
+Description: Assume the following code
+
+require 'data'
+puts Date.civil
+puts Date.civil(2016)
+puts Date.civil(2016, 5)
+puts Date.civil(2016, 5, 13)
+
+What will each of the 4 puts statements print
+
+------------------
+Understand Problem 
+------------------
+
+  - According to the ruby documentation at https://ruby-doc.org/stdlib-2.7.2/libdoc/date/rdoc/Date.html , the Class provides two classes: Date and DateTime. The class method ,Date::civil, creates a date object of the given calendar date where BCE years are counted astronomically.
+
+  - For example, before year 1 is the year 0, followed by year -1.  
+  - The month/date negative or positive (-1 starts from last day/month) and not zero
+
+  - Date::civil is a class method, so it should call the method directly from the class
+  - it is not saved as an instance
+  - It is similar to the Date::new class method.
+
+------------
+Examples
+------------
+  - Date.new(2001) => #Date: 2001-01-01 ...>
+  - Date.new(2001,2,3) => #Date: 2001-01-01 ...>
+  - Date.new(2001,2,3) => #Date: 2001-02-01 ...>
+

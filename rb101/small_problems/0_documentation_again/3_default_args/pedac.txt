@@ -1,0 +1,36 @@
+Description:
+Consider the following method and a call to that method
+
+def my_method(a, b = 2, c = 3, d)
+  p [a, b, c, d]
+end
+
+my_method(4, 5, 6)
+
+Use the ruby documentation to determine what this code will print.
+
+
+--------------
+Undestanding Problem
+--------------
+  - We have created method, that takes 4 parameter, calls p on an array of the parameters, and returns the value given.
+  - 2 of the arguments, b and c, have default values
+  - Only 3 arguments are passed to the created method.
+  - do b and c keep their default values in this case?
+  - will an error be raised because d is the last parameter needed?
+
+------------
+Example Cases
+------------
+given above.
+
+---------------
+Data Structures
+---------------
+ - In this problem we have a method, integers, and an array of those integers,
+ - we call p instead of puts on the array of integers
+
+------------
+Algorithm
+------------
+ - Here we are using the default positions argument, algorithm for method parameters
