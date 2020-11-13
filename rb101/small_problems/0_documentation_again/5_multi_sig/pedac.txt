@@ -1,0 +1,54 @@
+Description:
+What do each of these puts statements output?
+a = %w(a b c d e)
+puts a.fetch(7)
+puts a.fetch(7, 'beats me')
+puts a.fetch(7) { |index| index**2 }
+
+
+_________________
+Understanding Problem
+-----------------
+- https://ruby-doc.org/core-2.7.2/Array.html#method-i-fetch
+- We make an array of strings using %w and store it in a variable called 'a'
+- We use fetch to return the value at that index, an IndexError exception is thrown if the referenced index is outside the boundaries of the array
+- Furthermore, if a block is given to the Array#fetch method, it will only be executed if the index referenced is invalid.
+
+_________________
+Examples 
+-----------------
+- input: ["a", "b", "c", "d", "e"]
+- input: index 7 
+  - => IndexError
+
+- input: ["a", "b", "c", "d", "e"]
+- input: index 7 & 'beats me'
+  - => "beats me"
+
+- input: ["a", "b", "c", "d", "e"]
+- input: index 7 with block index squared
+  - => 49
+
+- input: ["a", "b", "c", "d", "e"]
+- input: index -1
+  - => "e"
+
+- input: ["a", "b", "c", "d", "e"]
+- input: index 0 
+  - => "a"
+
+_________________
+Data Structures
+-----------------
+- Arrays, chars 
+
+_________________
+Algorithm      
+-----------------
+- create an array of strings and store in a variable 
+- output the variable at the index specified
+
+
+
+--------LS Side Notes--------------
+In addition to #fetch returning the element of an Array by its index, it also does bounds checking (which Array#[] does not); that is, it checks whether the specified element actually exists before fetching it, and raises an error if it does not exist. The second and third forms of #fetch prevent an error from occuring if the indicated element does not exist by providing a default value or a block that returns an appropriate value.

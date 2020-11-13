@@ -8,15 +8,46 @@ How would you search this Array to find the first element whose value exceeds 8?
 --------------------
 Understanding Problem
 --------------------
-
+- https://ruby-doc.org/core-2.7.2/Array.html#method-i-bsearch
+- Given an array, output the first element who's value exceeds 8
+- input: an array of numbers
+- output: first value greater than 8
+- the object method, Array#bsearch, searches through ordered arrays faster than Array#select
+- things to consider:
+  - What if there is no number greater than 8?
+  - What if a string or another data structure is in our array?
+  - What if our number is a float
 --------------------
 Example Cases
 --------------------
+input: [0, 4, 7, 10, 12]
+output: 12
 
+input: [14, 3, 7] 
+output: 14
+
+input:[8, 8, 8, 8]
+output: "No number greater than 8" 
+
+inputs: [8.01, 123]
+output: 8.01
+
+inputs: ["one hundred", "151", "120", 9]
+output: 151.to_f
 -----------------
 Data Structures
 -----------------
+- Arrays, numbers(integers, floats, etc.)
+- binary search method
 
 -----------------
 Algorithm
 -----------------
+- iterate through the array
+- if the index value converted to a float > 8, store it in a variable and stop looping
+  - use binary search in ruby to achieve this
+- if the stored variable is nil or < than 8, output a message, else output the result 
+
+
+
+
