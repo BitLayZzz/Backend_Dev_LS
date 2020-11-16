@@ -1,0 +1,53 @@
+Description:
+Use irb to run the following code:
+
+s ='abc'
+puts s.public_methods.inspect
+
+You should find that it prints a list of all of the public methods available to the String s; this includes not only those methods defined in the String class, but also methods that are inherited from Object (which inherits other methods from the BasicObject class and the Kernel module). That's a lot of methods.
+
+How would you modify this code to print just the public methods that are defined or overridden by the String class? That is, the list should exclude all members that are only defined in Object, BasicObject, and Kernel.
+
+
+----------------------------
+Understanding Problem
+----------------------------
+- https://ruby-doc.org/core-2.7.2/Object.html#method-i-public_methods
+- https://ruby-doc.org/core-2.7.2/String.html#method-i-inspect
+- 
+- We are currently outputting all of the methods from the String class.
+- We are also outputting all methods from the Parent Classes that `String` class inherits from.
+- We only want to output the methods specifically in String
+- `Object#public_methods` takes a parameter, all, in the format `public_methods(all=bool)`
+  - if the boolean value in all is set to false, than only methods in the child/receiving class will be listed
+
+
+----------------------------
+Example Cases
+----------------------------
+- input: integer value with public_methods set to true
+- output: an array of methods, including those inherited from the parent class `object`
+
+- input: integer value without public_methods set to true
+- output: an array of methods, excluding those inherited from the parent class `object`
+
+- input: string value with public_methods set to true
+- output: an array of methods, including those inherited from the parent class `object`
+
+- input: string value without public_methods set to true
+- output: an array of methods, excluding those inherited from the parent class `object`
+
+
+----------------------------
+Data Structure
+----------------------------
+- We have a `string` object, a method inherited from the parent class, and an instance method
+
+
+----------------------------
+Algorithm
+----------------------------
+- create a string object
+- create an array of all class and instance methods within string object
+- create an array excluding any methods inherited from the parent class that aren't included in the string class
+- output whether or not these two strings equal each other 

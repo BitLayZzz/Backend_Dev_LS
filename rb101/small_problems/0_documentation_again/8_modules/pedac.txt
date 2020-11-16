@@ -1,0 +1,46 @@
+Description: 
+Use irb to run the following codes
+
+a = [5, 9, 3, 11]
+puts a.min
+
+Find the documentation for the #min method and change the above code to print the two smallest values in the Array.
+
+-----------------------
+Understand Problem
+-----------------------
+- https://ruby-doc.org/core-2.7.2/Array.html#method-i-min
+- We have a list of numbers
+- We need to print the two smallest values to the screen
+  - We must use `Array#min` to do so.
+  - This method can take several different forms, including `min(n)`
+    - n is the minimum number of elements returned as an array to the screen
+- Things to consider:
+  - What if we have the same value throughout our list?
+  - How would we print multiple values to the screen instead of one?
+  - What if we don't want to return our answer as an array?
+  - What if we have string values?
+
+-----------------------
+Example Case
+-----------------------
+- input: array of numbers (5, 9, 3, 11)
+- output: array of numbers 3 and 5
+ 
+- input: array of objects (5, 9, "3", 11)
+- output: array of objects ("3", 5)
+
+- input: array of strings ("266", "125", "350")
+- output: ["125", "266"]
+
+
+-----------------------
+Data Structures
+-----------------------
+- integers/strings, an array, a method to iterate through an array
+
+-----------------------
+Algorithm
+-----------------------
+- create an array of objects
+- iterate through the array to output the two lowest values within it.

@@ -1,0 +1,50 @@
+Description:
+What does this code print?
+
+5.step(to: 10, by: 3) { |value| puts value }
+
+
+----------------------
+Understanding Problem
+----------------------
+- https://ruby-doc.org/core-2.7.2/Numeric.html#method-i-step
+  - using the Numeric#step method to iterate through a sequence of numbers
+  - The format for this method is 'step(limit=nil, step=1)'
+- this specific call to Numeric#step is starting from 5 and iterating by 3 until we reach the limit of 10
+- each value is output to the screen using puts
+- Things to consider:
+  - will 5 output to the screen?
+  - what will happen if the limit is a different data structure type?
+  - Does the limit output to the screen?
+  - What happens if 0 is passed as the step? 
+  - What happens if we pass floats instead of integers?
+
+----------------------
+Example Case
+----------------------
+5.step(to: 10, by: 3) { |value| puts value }
+#=> 5
+#=> 8
+
+----------------------
+Data structures
+----------------------
+- integers, methods w/ method blocks
+
+
+----------------------
+Algorithm
+----------------------
+- start from the number 5
+  - Until the limit of ten is reached, increment by 3 and output that current value to the screen 
+  - Exit the loop when the value is greater than or equal to 10
+
+
+-------- LS Side Notes ---------
+
+- If you need a method that works with numbers, the following classes are worth searching through: 
+  - Integer ( Inherits from Numeric )
+  - Float   ( Inherits from Numeric )
+  - Numeric
+  - Math
+
