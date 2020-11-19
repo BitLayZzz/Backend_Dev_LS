@@ -1,0 +1,82 @@
+Description:
+Build a command line calculator program that does the following:
+- asks for two numbers
+- asks for the type of operation to perform: add, subtract, multiply, or divide
+- displays the result
+
+-------------------------
+Understanding the Problem:
+-------------------------
+  - input1: a number (ex: 1)
+  - input2: type of arithmetic operation to perform ('+', -, *, /) 
+  - input3: another number (ex: 2)
+
+  - output: the result of the arithmetic operation (ex: 1 + 2 = 3)
+
+  - requirements: 
+    - user input for numbers must be of type float or integer
+    - no more than two numbers
+    - the arithmetic symbol will be given 
+
+  - problem model:
+
+  - things to consider:
+    - Will the program continue after the operation is completed?
+    - How will other data types be handled if given by user?
+    - What if negative numbers are given?
+
+------------------------
+Examples / Test Cases:
+------------------------
+  - input1: 1
+  - input2: '+'
+  - input3: 2
+  - expected output: "1 plus 2 equals 3"
+
+  - input1: 2.56
+  - input2: '-'
+  - input3: 2
+  - expected output: "2.56 minus 2 equals 0.56"
+
+  - input1: one hundred
+  - input2: '*'
+  - input3: -22
+  - expected output: retries at input1
+
+  - input1: 1
+  - input2: 'divided by'
+  - input3: 2
+  - expected output: retries at input2 
+
+------------------------
+Data Structure:
+------------------------
+  - input: 
+    - two numbers (floats/integers), and a arithmetic operator in type string
+    
+  - rules:
+    - arithmetic calculation with the three inputs 
+    
+------------------------
+Algorithm:
+------------------------
+  - create a loop to begin program with title screen
+    - unless the program returns 'q', keep the program looping
+    - ask user for a number in the form of a decimal number
+      - if the user input is 'q', change the user input equal to q and end
+      - if the user gives a string other than q, start the program over
+    - ask the user for an operator
+      - if the user input does not equal +, -, *, /, or q retry asking 
+      - quit the program if user chose 'q'
+    - ask user for a second number in the form of a decimal number
+      - if the user input is 'q', change the user input equal to q and end
+      - if the user gives a string other than q, retry asking 
+    - do arithmetic operation depending on the operator given
+      - if '+', find the sum
+      - if '-', find the difference
+      - if '*', find the product
+      - if '/', find the quotient
+    - output the result
+  - if "q" was given at any point, end the loop
+
+  Abstractions: (1 to 2 sentences per step)
