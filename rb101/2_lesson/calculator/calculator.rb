@@ -2,7 +2,7 @@
 
 def op_assign
   begin
-    puts "Enter an arithmetic operation ('+', '-', '*', '/')"
+    puts "Enter an arithmetic operation ('+', '-', '*', '/') or 'q' to quit"
     op = gets.chomp
     raise 
   rescue
@@ -16,7 +16,7 @@ def num_assign(number)
   begin
     puts "Enter your #{number} number or 'q' to quit"
     num = gets.chomp
-    raise if num.to_i == 0
+    raise if num.to_f == 0
   rescue
     retry if num != 'q' && num != '0' 
   end
@@ -30,9 +30,11 @@ while true
   first_num = num_assign("first") 
   first_num == 'q' ? break : first_num = first_num.to_f
 
+  puts first_num
   op = op_assign()
   break if op == 'q'
 
+  puts "#{first_num} #{op}"
   second_num = num_assign("second") 
   second_num == 'q' ? break : second_num = second_num.to_f
 
