@@ -8,7 +8,8 @@ Short circuiting - a concept for the && operator that allows all further express
 
   In this example an ArgumentError will not be raised because the first expression is already false.
 
----
+----------
+TRUTHINESS
 
 Truthiness - Thanks to Ruby being a very liberal language, any object that doesn't evaluate to false or nil can be considered truthy, this doesn't however guarantee the object will equal true.
 
@@ -22,6 +23,8 @@ Truthiness - Thanks to Ruby being a very liberal language, any object that doesn
   
   In this example 5 is "truthy" but not necessarily true.
 
+------------------------
+PSEUDO-CODE n FLOWCHARTS
 Pseudo-Code - away of formulating the logic of a program that we are preparing to write, that is language independent. In other words, one does not have to focus on the language syntax when writing "code" this way first.
 
   KEY WORDS for Pseudo-Code
@@ -35,3 +38,10 @@ Pseudo-Code - away of formulating the logic of a program that we are preparing t
   END - end of program 
 
 
+Pseudo-Code is the equivalent to the A in the PEDAC process
+
+Flowcharts - using flowcharts to map out the procedural steps of an algorithm will help you understand the logic behind a specific process
+  - This logic deducing tool is best used when extracting subprocesses from larger programs or algorithms that may be leaving you confused or troubled.
+  - From a higher level, utilizing declarative (more abstracted) code instead of imperative(more detailed) code segments our program into logical sections, allowing us to focus on one section at a time.
+
+Always try to figure out how detailed the words should be and what can be extracted to sub-processes when using both of these tools to help dissect the logic of a problem

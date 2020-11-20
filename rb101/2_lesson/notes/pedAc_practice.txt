@@ -1,0 +1,40 @@
+# Assignment:
+Do a few practice rounds using pseudo_code to guide your problem solving logic.
+
+For example, write out pseudo-code that does the following:
+
+1. a method that returns the sum of two integers
+2  a method that takes an array of strings, and returns a string that is all of those strings concatenated together.
+3. a method that takes an array of integers, and returns a new array with every other element
+
+
+Algorithm 1:
+- DEFINE a method named addition that takes to numbers.
+  - within the method addition, perform arithmetic on the two numbers.
+  - RETURN the sum of the two numbers
+- CALL the method addition and pass two numbers to it
+- PRINT the returned value to the screen
+
+Algorithm 2:
+- CREATE a method named cat, that takes a list as a paramter
+  - CREATE a variable named concatedlist
+  - LOOP through the list
+    - convert each value to type string 
+    - push each value in the index to the end of the variable concatedlist 
+    - RETURN the variable concatedlist
+- GET a user sentence 
+- CONVERT that user input into a list of words/characters, separated depending where spaces were in the sentence. 
+- send the newly made list of words to the method cat and save it to finalresult
+- PRINT finalresult
+
+Algorithm 3:
+- DEFINE a method named even-index that takes a list of integers as a parameter
+  - CREATE a new array named even_filter
+  - LOOP through the list of integers
+    - if the value in the array is from index 0 or an even index, push it to even_array 
+  - RETURN even_array
+- GET a user list of integers
+- CALL the method even_filter with the user list of integers as the parameter
+- SAVE the returned value to a variable called finalresult
+- PRINT finalresult
+

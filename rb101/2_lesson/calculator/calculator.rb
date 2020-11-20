@@ -1,54 +1,60 @@
 # Simple Arithmetic!
+def prompt(message)
+  puts "=> #{message}"
+end
 
 def op_assign
   begin
-    puts "Enter an arithmetic operation ('+', '-', '*', '/') or 'q' to quit"
+    prompt("Enter an arithmetic operation ('+', '-', '*', '/') or 'q' to quit")
     op = gets.chomp
-    raise 
+    raise
   rescue
     retry if op != '+' && op != '-' && op != '*' && op != '/' && op != 'q'
   end
-  
-  return op
+  op
 end
 
-def num_assign(number) 
+def num_assign(number)
   begin
-    puts "Enter your #{number} number or 'q' to quit"
+    prompt("Enter your #{number} number or 'q' to quit")
     num = gets.chomp
-    raise if num.to_f == 0
-  rescue
-    retry if num != 'q' && num != '0' 
+    raise if num.to_f == 0.0
+  rescue # says avoid rescuing without specifying error class
+    retry if num != 'q' && num != '0'
   end
-
-  return num
+  num
 end
 
-while true
-  puts "Simple Arithmetic!" 
+loop do
+  prompt('Simple Arithmetic!')
 
-  first_num = num_assign("first") 
+  first_num = num_assign('first')
   first_num == 'q' ? break : first_num = first_num.to_f
 
-  puts first_num
-  op = op_assign()
+  prompt(first_num.to_s)
+
+  op = op_assign
   break if op == 'q'
 
-  puts "#{first_num} #{op}"
-  second_num = num_assign("second") 
+  prompt("#{first_num} #{op}")
+
+  second_num = num_assign('second')
   second_num == 'q' ? break : second_num = second_num.to_f
 
   answer =
     case op
-    when '+' then "#{first_num} plus #{second_num} equals #{first_num + second_num}"
-    when '-' then "#{first_num} minus #{second_num} equals #{first_num - second_num}"   
-    when '*' then "#{first_num} times #{second_num} equals #{first_num * second_num}"
-    when '/' then "#{first_num} divided by #{second_num} equals #{first_num / second_num}"
+    when '+'
+      prompt("#{first_num} plus #{second_num} equals #{first_num + second_num}")
+    when '-'
+      prompt("#{first_num} minus #{second_num} equals #{first_num - second_num}")
+    when '*'
+      prompt("#{first_num} times #{second_num} equals #{first_num * second_num}")
+    when '/'
+      prompt("#{first_num} divided by #{second_num} equals #{first_num / second_num}")
     end
 
-  puts answer 
-  puts ""
+  puts answer
   sleep 1
 end
 
-puts "Ending math program..."
+prompt('Ending math program...')

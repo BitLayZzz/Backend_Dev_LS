@@ -1,0 +1,10 @@
+Second half of lesson 2 to notes starting from section 10: Rubocop
+
+--------------- 
+RUBOCOP GEM
+
+- Static code analyzer. Analyzes your code and offers advice about its style format as well as possible logical errors. Rubocop itself is a modular framework using a pluggable architecture to insert enforcement rules. In Rubocop parlance, these rules are called 'cops.' Cops are further grouped into departments.
+
+
+- Code Linting:
+  - A program that inspects your code for possible logical errors or code smells. This isn't foolproof, but can serve as a first level of defense against obvious problems. Rubocop has some basic code linting functionality built-in.
