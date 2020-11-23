@@ -1,0 +1,21 @@
+These are the general steps to debugging a program outlined in the debugging section in Launch School:
+Debugging is arguably the most important skill you need to learn as a programmer. Focus on developing a patient, systematic temperament; carefully read error messages; use all the resources you have; approach it in sequential steps; and use the techniques.
+
+1. Reproduce the Error
+  - The first step in debugging any problem is usually reproducing the problem. Programmers need a deterministic way to consistently reproduce the problem, any only then can we start to isolate the root cause. This will become more important as you build more sophisticated applications with various external dependencies and moving parts. Reproducing the exact error will often end up being more than half the battle.
+
+2. Determine the Boundaries of the Error
+  - Once you can consistently reproduce the problem, it's time to tweak the data that caused the error. Understand, whether or not, modifying the data affects the program behavior. Pay attention to whether you get new errors or the same from before. The deeper you understand the scope of the problem, the more holistic of a solution you can come up with.
+
+3. Tracing the Code
+  - Once you understand the boundaries of the problem, it's time to trace/track the code. This can be made easier by following the control flow of the specific section of a program. This will succesfully allow us to "trap the error".
+
+4. Understand the Problem Well
+  - After narrowing the source of the bug to the specific section of your code that isn't flowing correctly/giving the correct value (trapped the error), it's time to break down what is actually happening in this specific section. Break down the logic of the specific section by stripping the code down and reimplementing it piece by piece until the problem reoccurs.
+
+5. Implement a Solution
+  - There are often mutiple ways and multiple layers in which you can make the fix. For example, we could suppress the error from being thrown with exception handling. In some cases, you'll be using a library or code that you can't modify. In those situations, you have no choice but to deal with edge cases in your own code. 
+  - ONLY FIX ONE PROBLEM AT A TIME. It's common to notice additional edge cases or problems as you're implementing a fix. Resist the urge to fix multiple problems at once.
+
+6. Test the Fix 
+  - Finally, after implementing a fix, make sure to verify that the code fixed the problem by using a similar set of tests from step #2. After you learn about automated testing, you'll want to add an additional automated test to prevent regression. For now, you can test manually.

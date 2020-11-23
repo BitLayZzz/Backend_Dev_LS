@@ -1,4 +1,7 @@
 # Simple Arithmetic!
+require "pry"
+
+
 def prompt(message)
   puts "=> #{message}"
 end
@@ -19,13 +22,14 @@ def num_assign(number)
     prompt("Enter your #{number} number or 'q' to quit")
     num = gets.chomp
     raise if num.to_f == 0.0
-  rescue # says avoid rescuing without specifying error class
+  rescue
     retry if num != 'q' && num != '0'
   end
   num
 end
 
 loop do
+  binding.pry #execution will stop here if uncommented
   prompt('Simple Arithmetic!')
 
   first_num = num_assign('first')

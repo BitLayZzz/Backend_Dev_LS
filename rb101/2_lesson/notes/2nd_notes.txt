@@ -8,3 +8,28 @@ RUBOCOP GEM
 
 - Code Linting:
   - A program that inspects your code for possible logical errors or code smells. This isn't foolproof, but can serve as a first level of defense against obvious problems. Rubocop has some basic code linting functionality built-in.
+
+
+------------------
+Precedence
+
+- The meaning of an expression in Ruby is determined by what is called operator precedence. It's a set of rules that dictate how Ruby determines what operands each operator takes.
+
+- Precendence determines the meaning of an expression.
+
+- For example:
+    : 3 + 5 * 7 --> '*' takes precendence over '+' 
+    : (3 + 5) * 7 --> everything inside '(...)' now takes precendence
+
+- The example above highlights an important point. If you're using 2 or more different operators in an expression, use parentheses to explicitly define the meaning. Even relying on left-to-right evaluation is subject to problems - for instance, multiple '=' operators evaluate right-to-left
+
+
+Code Evaluation:
+  - Precendence in Ruby is only part of the story; the other parts to consider have to do with code evaluation; left-to-right eval, right-to-left eval, short-circuiting, and ternary expressions.
+  - In an arithmetic expression, Ruby first goes through an expression left-to-right and evaluates everything it can without calling any operators.
+  - Right-to-left evaluation occurs when you do multiple assignments or multiple modifiers:
+    ex: a = b = c = 3
+    - this is not good practice in Ruby, so don't do it.
+  - The more conditional operators, such as '?:', &&, and ||, are treated differently from other operators and do not evaluate subexpressions unless it needs them.
+
+

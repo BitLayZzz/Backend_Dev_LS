@@ -1,0 +1,18 @@
+These are some suggestions for how you can approach debugging outlined from the debugging sections in Launch School:
+Debugging is arguably the most important skill you need to learn as a programmer. Focus on developing a patient, systematic temperament; carefully read error messages; use all the resources you have; approach it in sequential steps; and use the techniques.
+
+1. Line by Line
+  - Your best debugging tool is patience. Most bugs in your code will be from overlooking a detail rather than a complete misunderstanding of a concept. Being careful, patient, and developing a habit of reading code LINE BY LINE, WORD BY WORD, CHARACTER BY CHARACTER, is the MOST powerful ability as a programmer. All other tips and tools won't matter if you aren't detail oriented.
+
+2. Rubber Duck
+  - Use some object as a sound board when faced with a hard problem. The idea is that when you are forced to explain the problem to a rubber duck, you are actually forcing yourself to articulate the problem, detail by detail. This often leads to discovering the root of the problem.
+
+3. Take a Walk
+  - Some have claimed a swim, jog, or even a shower can help as well. Some claim this technique works because it activates different parts of your brain related to making connections know as the diffuse mode. Even when you walk away from the computer, your brain is still working on the problem in the background. This is only effective if you first spend time loading the problem in your brain. Once loaded, your brain may work on the problem even while you're sleeping! Also, our brains get tired too, so it's ok to step away and come back to it with fresh eyes and a refreshed mind.
+
+4. Using Pry (Ruby Specific)
+  - Pry is a powerful RUBY REPL that can replace IRB. using by including 'require "pry"' in your code. Once required, you can set a breakpoint using 'binding.pry' anywhere in your code, and when Ruby gets to that line, execution will stop and you'll be able to inspect the state of your program at that point.
+  - To continue execution, enter 'Ctrl+D', to exit the program, enter 'exit-program'
+
+5. Using a Debugger
+  - Pry can also be used as a debugger, specifically for Ruby, which gives you the ability to step into functions and more systematically walk over code.

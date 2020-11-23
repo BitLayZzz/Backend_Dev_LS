@@ -7,17 +7,11 @@ calculator.rb:11:3: C: Style/RescueStandardError: Avoid rescuing without specify
   rescue
   ^^^^^^
 calculator.rb:22:3: C: Style/RescueStandardError: Avoid rescuing without specifying an error class.
-  rescue # says avoid rescuing without specifying error class
+  rescue
   ^^^^^^
-calculator.rb:48:13: C: Layout/TrailingWhitespace: Trailing whitespace detected. (https://github.com/bbatsov/ruby-style-guide#no-trailing-whitespace)
-    when '-' 
-            ^
 calculator.rb:49:81: C: Layout/LineLength: Line is too long. [81/80] (https://github.com/bbatsov/ruby-style-guide#80-character-limits)
       prompt("#{first_num} minus #{second_num} equals #{first_num - second_num}")
                                                                                 ^
-calculator.rb:50:13: C: Layout/TrailingWhitespace: Trailing whitespace detected. (https://github.com/bbatsov/ruby-style-guide#no-trailing-whitespace)
-    when '*' 
-            ^
 calculator.rb:51:81: C: Layout/LineLength: Line is too long. [81/80] (https://github.com/bbatsov/ruby-style-guide#80-character-limits)
       prompt("#{first_num} times #{second_num} equals #{first_num * second_num}")
                                                                                 ^
@@ -25,4 +19,4 @@ calculator.rb:53:81: C: Layout/LineLength: Line is too long. [86/80] (https://gi
       prompt("#{first_num} divided by #{second_num} equals #{first_num / second_num}")
                                                                                 ^^^^^^
 
-1 file inspected, 7 offenses detected
+1 file inspected, 5 offenses detected
