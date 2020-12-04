@@ -11,7 +11,7 @@ RUBOCOP GEM
 
 
 ------------------
-Precedence
+PRECEDENCE
 
 - The meaning of an expression in Ruby is determined by what is called operator precedence. It's a set of rules that dictate how Ruby determines what operands each operator takes.
 
@@ -23,6 +23,7 @@ Precedence
 
 - The example above highlights an important point. If you're using 2 or more different operators in an expression, use parentheses to explicitly define the meaning. Even relying on left-to-right evaluation is subject to problems - for instance, multiple '=' operators evaluate right-to-left
 
+- AGAIN! DON'T RELY ON PRECEDENCE RULES WHEN MIXING OPERATORS. 
 
 Code Evaluation:
   - Precendence in Ruby is only part of the story; the other parts to consider have to do with code evaluation; left-to-right eval, right-to-left eval, short-circuiting, and ternary expressions.
@@ -32,4 +33,8 @@ Code Evaluation:
     - this is not good practice in Ruby, so don't do it.
   - The more conditional operators, such as '?:', &&, and ||, are treated differently from other operators and do not evaluate subexpressions unless it needs them.
 
-
+Block Precedence:
+  - Blocks have the lowest precedence in ruby. However between the two different formats ( {...} and do...end ) {...} takes slightly higher precence. To test this call p on an array#select block in both formats
+    - the array with do...end should only return the Enumerator object without changes from the block.
+  - Another way to think about it, the binding of a method and it's argument is slightly tighter than the binding of a method and a do...end block. While a {...} block has a tighter binding to it's method
+    - This is useful to know if you ever need to write one liners that immediately output to the screen.

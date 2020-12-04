@@ -29,7 +29,7 @@ def num_assign(number)
 end
 
 loop do
-  binding.pry #execution will stop here if uncommented
+  # binding.pry #execution will stop here if uncommented
   prompt('Simple Arithmetic!')
 
   first_num = num_assign('first')
