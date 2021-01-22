@@ -1,0 +1,10 @@
+# prompts in diffent languages
+en:
+  op_title:   "Enter an arithmetic operation ('+', '-', '*', '/') or 'q' to quit"
+  welcome:    "Simple Arithmetic!"
+  num_title: "Enter in a number or 'q' to quit"
+
+es:
+  op_title:  "Ingrese una operacion aritmetica ('+', '-', '*', '/') o 'q' para terminar"
+  welcome:   "Aritmetica Simple!"
+  num_title: "Ingrese una numero o 'q' para terminar" 
