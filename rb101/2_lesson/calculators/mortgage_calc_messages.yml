@@ -1,0 +1,10 @@
+# Mortgage Calculator prompts
+
+en:
+  welcome: "Simple Loan Payment Calculator!"
+  principal: "Enter your Principal Payment or 'q' to quit"
+  interest: "Enter your monthly interest rate as a decimal(100% = 1; 50% = .5; 5% = .05; etc.)\n=> or 'q' to quit"
+  interest_check: "Are you sure this is your monthly interest? (y/n)"
+  loan_duration: "Enter a valid monthly loan duration or 'q' to quit"
+  results_prompt: "Your monthly payments should come out to..."
+  
