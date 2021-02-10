@@ -33,7 +33,7 @@ end
 
 def calculate(p, j, n)
   m = p * (j / (1 - (1 + j)**(-n)))
-  m.to_i
+  m.to_f
 end
 
 def duration_check(num)
@@ -123,7 +123,7 @@ loop do
 
   sleep 1
 
-  puts "=> $#{answer} give or take"
+  puts "=> $#{format("%.2f", answer)} give or take"
   puts "\n"
   sleep 3
 end
