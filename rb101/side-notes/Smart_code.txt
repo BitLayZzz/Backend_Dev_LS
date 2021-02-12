@@ -1,0 +1,23 @@
+Just some quick tips to follow that I picked up throughout this section
+
+Started here 02/11/2021
+- Always think about your future self and others when writing names for variables, methods, etc.
+- Use descriptive names for variables
+- DO NOT mutate constants in ruby
+- Use snake case for variables
+
+Method Tips
+- Try to limit methods to only 10 lines of code and one job
+- Only explicitly return values when ABSOLUTELY necessary
+- Decide whether the method should return a value with no side effects or perform side effects with no return value. 
+- Methods should be at the same level of abstraction(should be able to extract the method and work with it separately)
+- Well compartmentalized methods makes programming large codebases much easier
+- Think about WHAT the method is intended to do and not HOW it needs to be implemented
+- The more you have to think about the method, the harder it is to use.
+- Thus, a bunch of small, standalone methods is better than one large one, think lego blocks
+- Properly name methods whether they output something or not with prefixes (print, display, say, etc.)
+- Once again...CONTAIN YOUR METHODS, simple functionality is best
+- Don't prematurely exit programs in methods...?
+
+LOOP Tips
+- KNOW  when to use "Do/While" vs. "While" !!!
