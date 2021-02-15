@@ -1,0 +1,23 @@
+These are some quick tips and notes on the concept of variable Scope
+
+Started this section 12/15/2021
+
+Basic idea
+- Scope determines where a variabel can be used within a program 
+- where a variable is created determines the scope.
+- Inner scope can access outerscope, but not vice versa
+- In ruby, for...do/end code is not a method invocation thus, no inner scope is created.
+- Other method invocations like 'each' and 'times,' create innerscopes
+
+Types of Variables
+- Constants, Global variables, Class variables, instance variables, and local variables.
+- Constants: declared in all caps, stores data that should be immutable, most outerscope.
+  --> MY_CONSTANT = "I'm everywhere in the program. DON'T CHANGE ME!"
+- Global vars: started with '$', available throughout whole app, not used often in ruby.
+  --> $global = 'Don't use me in ruby, just know I exist' 
+- Class vars: started with two '@'s. Accesible by class instances. Can be changed.
+  --> @@class_var = 'Create me at class level, when you need a general class variable!'
+- Instance vars: started with one '@'. Available in current instance of the parent class.
+  --> @instance_var = 'I can only cross SOME scope boundaries. Use me when more skilled!'
+- Local vars: started with just name. Most common and must obey scope boundaries. 
+  --> local_var = 'You will use me all the time. I follow all the rules.'

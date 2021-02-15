@@ -19,5 +19,20 @@ Method Tips
 - Once again...CONTAIN YOUR METHODS, simple functionality is best
 - Don't prematurely exit programs in methods...?
 
+Finished 02/15/2021
 LOOP Tips
 - KNOW  when to use "Do/While" vs. "While" !!!
+  - One tip: use "Do/While" when you have to intiliaze a variable outside of a while loop
+- Remember Clarity over Terseness
+
+Truthiness Review
+- In short, ruby is very liberal with what it considers a "true" statement
+  --> Everthing in ruby is true except nil and false
+  --> ex: use 'if user_input' instead of 'if user_input == true' because it's already "true"
+- Truthiness can lead to dangerous bugs if not careful
+  --> For Example, 'if variable = 2' will ALWAYS evaluate to true, this is assignment
+- Because of truthiness, avoid "assignment within a conditional code" like above
+
+How to Approach Learning
+- This is not sequential, you can't "master" it.
+- Keep revisiting old topics and over time, they will make sense.
