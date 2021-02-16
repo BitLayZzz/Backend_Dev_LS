@@ -3,7 +3,7 @@ These are some quick tips and notes on the concept of variable Scope
 Started this section 12/15/2021
 
 Basic idea
-- Scope determines where a variabel can be used within a program 
+- Scope determines where a variable can be used within a program 
 - where a variable is created determines the scope.
 - Inner scope can access outerscope, but not vice versa
 - In ruby, for...do/end code is not a method invocation thus, no inner scope is created.
@@ -21,3 +21,28 @@ Types of Variables
   --> @instance_var = 'I can only cross SOME scope boundaries. Use me when more skilled!'
 - Local vars: started with just name. Most common and must obey scope boundaries. 
   --> local_var = 'You will use me all the time. I follow all the rules.'
+
+--------------------------------------------------
+CONTINUED 12/16/2021
+
+- The two major areas for local variable scoping rules are the method definition and invocation
+
+ Blocks and Scope rules in Ruby
+- To clarify, the block in ruby is the 'do..end' or '{..}' parts of your methods
+- the method invocation comes before the blocks.
+- Blocks CREATE a new scope for local variables; aka the 'inner scope'.
+- Outer scope variables can be accessed by inner scope.
+- Outer scope variables can also be REASSIGNED by inner scope
+- Inner scope variables CAN NOT be accessed by outer scope, and thus, can't change them.
+- Peer scopes CAN NOT reference each other's variables even if they have the same names.
+- With Nested blocks, think in terms of levels (1st, 2nd, etc.) instead of scope
+  --> same rules apply to Nested Blocks,
+  --> The deeper levels can't reference more surface levels.
+
+- Variable Shadowing cuts access to outerscope, when there's a similar named parameter
+  --> example: n = 10; [1, 2, 3].each { |n| printf n }
+  --> The above outputs 123 instead of 10
+
+-------------------------------------------------
+
+Variables and Method Definitions
