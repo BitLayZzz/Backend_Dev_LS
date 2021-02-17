@@ -44,5 +44,31 @@ CONTINUED 12/16/2021
   --> The above outputs 123 instead of 10
 
 -------------------------------------------------
+Continued 02/17/2021
+
+A Little about Constants
+- Only other basic variable besides locals
+- DIFFERENT than local variables
+- In procedural style programming, constants are like global vars.
+  --> They can be accessed in all scope n by all methods without being explicitly passed
+- Innerscope constants can be accessed by OUTER SCOPE, very important
 
 Variables and Method Definitions
+- method scopes are entirley self-contained(local variables must be passed as arguments)
+- there is no notion of "outer" or "inner scope" 
+- self containment means definitions can't access local variables in another 'scope'
+  --> unless they're 'passed in' that is ;)
+- the same rules apply for blocks within method definitions
+
+Methods, Blocks, and Variable Scope, the Inter-Relationship
+- Again, the two key terms are method Definition and method Invocation
+- Definitions are made when we define a Ruby method using 'def'
+- Invocations are when we "call" the methods, (core library or custom)
+- Methods...can also be INVOKED with BLOCKS, thus, are part of the method invocation
+  --> In Ruby, any method can be called with a block.
+- using '{..}' or 'do..end' will define blocks in Ruby.
+- Think of blocks like method arguments along with local vars.
+
+--------------------------------------------------
+
+Method and Block Examples n Possibilities
