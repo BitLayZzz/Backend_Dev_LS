@@ -70,5 +70,25 @@ Methods, Blocks, and Variable Scope, the Inter-Relationship
 - Think of blocks like method arguments along with local vars.
 
 --------------------------------------------------
+Continue 02/18/2021
 
-Method and Block Examples n Possibilities
+Argument usage examples n possibilities
+- Methods can send parameters and not use them
+  --> def greetings(str) puts "goodbye" end
+- Methods can send parameters and use them
+  --> def greetins(str) puts str end
+- Blocks can be passed as well to methods and not used
+  --> def greetings
+        puts 'goodbye'
+      end
+      greetings { puts word_in_block }
+- Blocks can be EXECUTED using 'yield'
+  --> def greetings
+        yield
+      end
+      greetings { puts 'hello' }
+
+SUMMARY, The Key Takeaway from All of This
+- Variables have scope rules depending on the Type (locals being most strict)
+- Variable, Block, and Method interaction is set by method definitions and method invocation
+- Method Invocations use the scope rules set by method definitions

@@ -1,0 +1,19 @@
+This section of the course discusses the differences between
+"pass by reference" and "pass by value"
+
+Started 12/18/2021
+
+- This programming topic stems from there being two ways of dealing objects passed to methods
+- You either have "references" to the og object, or "values" (copies) of the og object.
+
+So what is pass by "value"?
+- In C, for example, passing an object by value creates a copy of the og object.
+- Copies have no effect on the original object outside of the method.
+- Ruby is up for debate
+  --> some say it's pass by value, because re-assigning the object doesn't affect outerscope.
+  --> methods require an implicit or explicit return to re-assign outerscope variables
+
+-------------------------------------------
+
+Now what is pass by "reference"?
+
