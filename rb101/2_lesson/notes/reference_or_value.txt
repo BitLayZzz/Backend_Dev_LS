@@ -14,6 +14,26 @@ So what is pass by "value"?
   --> methods require an implicit or explicit return to re-assign outerscope variables
 
 -------------------------------------------
+Continued 02/23/2021
 
 Now what is pass by "reference"?
+- Passing by reference allows method operations to make changes to original objects.
+- Ruby can also be "pass by reference", because methods mutate original objects.
+  --> ex: the difference between 'str.capitalize' and 'str.capitalize!'
 
+So What's Going On Here?!
+- Some Rubyists call this behavior "passing by value of the reference", or "call by sharing"
+- Most important thing: 
+ --> When an operation within the method mutates the caller, it will affect the og object
+- Whether or a not an object is mutated by method operations depends on the operation used...
+  --> In other words, practice a lot and you will notice which ones do and which ones don't!
+  --> ex: array = array + [name] is very different than array = array << [name]. Try it out!
+
+So in Summary...
+
+- Pass by Value uses object copies, Pass by Reference uses og objects, and Ruby uses both! 
+- So Ruby is a "Pass by Value of the Reference" language!
+
+-----------------------------------------
+
+Variables as Pointers
