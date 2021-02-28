@@ -35,5 +35,22 @@ So in Summary...
 - So Ruby is a "Pass by Value of the Reference" language!
 
 -----------------------------------------
+Continued 02/27/2021
 
 Variables as Pointers
+- Very confusing to new programmers, but is one THE most important.
+- basic example:
+  --> a = "hi there", b = a, a = "not here": What is 'b' in this case in ruby?
+- basic idea is Variables are POINTERS to PHYSICAL MEMORY SPACE(address).
+- In ruby, the '=' operator REASSIGNS variables to different addresses in memory.
+- different memory spaces can hold the same value.
+- another example:
+  --> a = 'hi', b = a, a << ', sam': What is 'b' here in ruby?
+- In the second example, there is no reassignment of a! and b will return the same value.
+In ruby, this can be further examined by using the 'object_id' method
+
+In  Summary for Pointers
+- variables POINT to PHYSICAL SPACES IN MEMORY (addresses)
+- Some operations mutate addresses in memory, and others change where variables point to
+- If a method MUTATES the caller, it changes the value in that physical space in memory.
+- If the value in memory changes, all variables POINTING to it will change!
