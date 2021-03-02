@@ -5,6 +5,7 @@ Started 12/18/2021
 
 - This programming topic stems from there being two ways of dealing objects passed to methods
 - You either have "references" to the og object, or "values" (copies) of the og object.
+- These are DATA EVALUATION STRATEGIES, specifically, OBJECT PASSING STRATEGIES.
 
 So what is pass by "value"?
 - In C, for example, passing an object by value creates a copy of the og object.
@@ -32,7 +33,11 @@ So What's Going On Here?!
 So in Summary...
 
 - Pass by Value uses object copies, Pass by Reference uses og objects, and Ruby uses both! 
-- So Ruby is a "Pass by Value of the Reference" language!
+- Ruby is not purely pass by reference because assigning variables is a pass by value op
+- Furthermore, ruby variables don't contain actual OBJECTS, but POINTERS to the OBJECTS
+  --> var to object id -> to actual object -> object contains data in memory.
+- So Ruby is a "Pass by Reference to the Pointer" language!
+- also known as, Pass by Reference Value! ;0
 
 -----------------------------------------
 Continued 02/27/2021
@@ -43,6 +48,7 @@ Variables as Pointers
   --> a = "hi there", b = a, a = "not here": What is 'b' in this case in ruby?
 - basic idea is Variables are POINTERS to PHYSICAL MEMORY SPACE(address).
 - In ruby, the '=' operator REASSIGNS variables to different addresses in memory.
+  --> "points" the variable to different objects in memory
 - different memory spaces can hold the same value.
 - another example:
   --> a = 'hi', b = a, a << ', sam': What is 'b' here in ruby?
@@ -54,3 +60,10 @@ In  Summary for Pointers
 - Some operations mutate addresses in memory, and others change where variables point to
 - If a method MUTATES the caller, it changes the value in that physical space in memory.
 - If the value in memory changes, all variables POINTING to it will change!
+
+-----------------------------------------
+Continued 03/01/2021
+
+Immutable objects!
+- Can never be modified! Even when being passed by reference into a method!
+
