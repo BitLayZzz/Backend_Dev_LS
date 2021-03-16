@@ -123,7 +123,7 @@ loop do
 
   sleep 1
 
-  puts "=> $#{format("%.2f", answer)} give or take"
+  puts "=> $#{format('%.2f', answer)} give or take"
   puts "\n"
   sleep 3
 end
