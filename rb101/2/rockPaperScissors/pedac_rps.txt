@@ -1,0 +1,71 @@
+PEDAC for rock paper scissors game in ruby
+
+PROBLEM
+--------
+
+description:
+Build a rock paper scissors game with the following workflow
+- user makes a choice
+- computer makes a choice
+- the winner is displayed
+
+Implicit knowledge:
+rock paper scissors game rules, rock is greater than scissors, scissors is greater than paper, paper is greater than rock
+
+Input/Output:
+- usr = rock, pc = scissors       -> 'You Win!'
+- usr = rock, pc = paper          -> 'I Win!'
+- usr = paper, pc = rock          -> 'You Win!'
+- usr = scissors, pc = scissors   -> 'It's a Tie!'
+
+Questions:
+What happens if I don't input one of the options? (rock, paper, or scissors)
+Am I inputing a number or am I inputting a string? integer
+What if I input a decimal number? (float)
+What if I don't enter anything?(nil, " ")
+
+EXAMPLE / TEST CASES
+---------------------
+
+- usr = rock, pc = scissors       -> 'You Win!'
+- usr = rock, pc = paper          -> 'I Win!'
+- usr = paper, pc = rock          -> 'You Win!'
+- usr = scissors, pc = scissors   -> 'It's a Tie!'
+- usr = nil, pc = paper           -> 'You didn't Choose!'
+- usr = " ", pc = rock            -> 'You didn't Choose!'
+- usr = cup, pc = scissors        -> 'That's not an Option!'
+
+Data Structures
+--------------------
+- global variable for welcome sign
+- local variables
+- numbers for user input
+- an array of options for PC choice
+
+ALGORITHM
+--------------------
+Implementation in ruby:
+0. Welcome Sign
+1. Start loop till break is called
+2. Take user input as either as an int
+  i. user input = 'nil' or " " output 'You didn't Choose!'
+  ii. elsif user input is not 1, 2, or 3, output 'That's not an option!'
+3. save user choice accordingly
+  i.   if 1, user choice equals rock
+  ii.  if 2, user choice equals paper
+  iii. if 3 user choice equals scissors
+4. assign PC input random number from 1 to 3
+5. save pc choice accordingly
+  i.   if 1, pc choice equals rock
+  ii.  if 2, pc choice equals paper
+  iii. if 3 pc choice equals scissors
+6. compare user choice to pc choice
+ i.     usr equals rock, pc equals rock, output 'It's a Tie!'
+ ii.    usr equals scissors, pc equals rock, output 'I Win!'
+ iii.   usr equals paper, pc equals rock, output 'You Win'
+ iv.    usr equals paper, pc equals paper, output 'It's a Tie!'
+ v.     usr equals scissors, pc equals paper, output 'You Win!'
+ vi.    usr equals rock, pc equals paper, output 'I Win'
+ vii.   usr equals scissors, pc equals scissors, output 'It's a Tie!'
+ viii.  usr equals rock, pc equals scissors, output 'I Win!'
+ ix.    usr equals paper, pc equals scissors, output 'You Win'

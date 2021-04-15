@@ -1,0 +1,14 @@
+# Rock Paper Scissors game prompts
+#
+en:
+  welcome:   "Rock, Paper, Scissors!\n=> Can you beat me?"
+  choices:   "Enter a number to choose (4 to quit game):
+     \n=> Rock(1)
+     \n=> Paper(2)
+     \n=> Scissors(3)
+     \n=> Quit(4)"
+  illegal:   "That's not a Choice!"
+  interlude: "My turn to choose..."
+  win:       "You Win!"
+  lose:      "You Lose!"
+  tie:       "It's a Tie!"
