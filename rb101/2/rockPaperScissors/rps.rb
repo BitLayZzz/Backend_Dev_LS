@@ -1,9 +1,11 @@
 # Rock Paper Scissors game written in ruby
 
-# My game
+#--------
+# MY GAME
+#--------
 
-require 'pry'
-require 'yaml'
+ require 'pry'
+ require 'yaml'
 
 MESSAGES = YAML.load_file('messages.yml')
 
@@ -107,6 +109,51 @@ loop do
   sleep 2
 end
 
-puts "Ending Program...goodbye for now!"
+puts "Ending My Program...Starting Sample Game!"
 
-# Sample game from course
+#------------------------
+# SAMPLE GAME FROM COURSE
+#------------------------
+
+VALID_CHOICES = ['rock', 'paper', 'scissors']
+
+def display_results(player, computer)
+  if (player == 'rock' && computer == 'scissors') ||
+      (player == 'paper' && computer == 'rock') ||
+      (player == 'scissors' && computer == 'paper')
+    prompt('You won!')
+  elsif (player == 'rock' && computer == 'paper') ||
+    (player == 'paper' && computer == 'scissors') ||
+    (player == 'scissors' && computer == 'rock')
+    prompt('Computer won!')
+  else
+    prompt("It's a tie!")
+  end
+end
+
+loop do
+  choice = ''
+  loop do
+    prompt("Choose one: #{VALID_CHOICES.join(', ')}")
+
+    choice = gets().chomp()
+
+    if VALID_CHOICES.include?(choice)
+      break
+    else
+      prompt("That's not a valid choice.")
+    end
+  end
+
+  computer_choice = VALID_CHOICES.sample
+
+  puts("You chose: #{choice}; Computer chose: #{computer_choice}")
+
+  display_results(choice, computer_choice)
+
+  prompt('Do you want to play again?')
+  answer = gets().chomp()
+  break unless answer.downcase().start_with?('y')
+end
+
+prompt('Thanks for playing. Goodbye!')
