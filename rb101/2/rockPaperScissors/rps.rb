@@ -4,8 +4,8 @@
 # MY GAME
 #--------
 
- require 'pry'
- require 'yaml'
+require 'pry'
+require 'yaml'
 
 MESSAGES = YAML.load_file('messages.yml')
 
@@ -29,30 +29,24 @@ def input_to_choice(input)
   choice
 end
 
+def who_won?(first_player, second_player)
+  if (first_player == 'Paper' && second_player == 'Rock') ||
+     (first_player == 'Scissors' && second_player == 'Paper') ||
+     (first_player == 'Rock' && second_player == 'Scissors')
+  end
+end
+
 def shoot(usr, pc, lang)
   print "=> Your Choice: #{usr} | My Choice: #{pc}\n"
 
   sleep 2
 
-  case 
-  when usr == 'Rock' && pc == 'Rock'
-    prompt(messages('tie', lang))
-  when usr == 'Scissors' && pc == 'Rock'
-    prompt(messages('lose', lang))
-  when usr == 'Paper' && pc == 'Rock'
+  if who_won?(usr, pc)
     prompt(messages('win', lang))
-  when usr == 'Paper' && pc == 'Paper'
-    prompt(messages('tie', lang))
-  when usr == 'Rock' && pc == 'Paper'
+  elsif who_won?(pc, usr)
     prompt(messages('lose', lang))
-  when usr == 'Scissors' && pc == 'Paper'
-    prompt(messages('win', lang))
-  when usr == 'Scissors' && pc == 'Scissors'
+  else
     prompt(messages('tie', lang))
-  when usr == 'Paper' && pc == 'Scissors'
-    prompt(messages('lose', lang))
-  when usr == 'Rock' && pc == 'Scissors'
-    prompt(messages('win', lang))
   end
 
   sleep 2
@@ -112,19 +106,22 @@ end
 puts "Ending My Program...Starting Sample Game!"
 
 #------------------------
-# SAMPLE GAME FROM COURSE
+# SAMPLE GAME FROM COURSE REFACTORED
 #------------------------
 
-VALID_CHOICES = ['rock', 'paper', 'scissors']
+VALID_CHOICES = %w(rock paper scissors)
+
+def win?(first, second)
+  if  (first == 'rock' && second == 'scissors') ||
+      (first == 'paper' && second == 'rock') ||
+      (first == 'scissors' && second == 'paper')
+  end
+end
 
 def display_results(player, computer)
-  if (player == 'rock' && computer == 'scissors') ||
-      (player == 'paper' && computer == 'rock') ||
-      (player == 'scissors' && computer == 'paper')
+  if win?(player, computer)
     prompt('You won!')
-  elsif (player == 'rock' && computer == 'paper') ||
-    (player == 'paper' && computer == 'scissors') ||
-    (player == 'scissors' && computer == 'rock')
+  elsif win?(computer, player)
     prompt('Computer won!')
   else
     prompt("It's a tie!")
