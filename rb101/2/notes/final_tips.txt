@@ -1,0 +1,39 @@
+These are more tips to highlight about proper code
+
+Code Chunking
+- Organizing code chunks is as important as making paragraphs for writers
+- Use new lines to organize your code into different chunks
+- Chunks can be different coding concerns:
+  - one example can be var initialization, user input, and using the var.
+
+Lil Details on Methods
+- Understand whether a method returns a value, has side effects, or both.
+  - A side effect can be object mutation or screen output
+  - ex: puts 1 + 2 returns nil but displays 3 to the screen
+  - Generally, if a method has both, it's a red flag. Avoid having both.
+
+- Be intentional when selecting methods from the Ruby library or writing your own!
+  - This is critical to writing code that's well organized and easy to read
+
+- When making your own methods, choose GOOD names
+ - if you have to constantly look back at how it's implemented, improve the name.
+
+- Stated previously, a method should do one thing right!
+
+Collection Mutation
+- Don't mutate collections (ex: arrays) while iterating through them
+ - instead, mutate each element within that collection.
+
+Variable Shadowing
+- Don't make inner scope variable names the same as outerscope names.
+- rubocop will catch this error in Ruby
+
+Conditional Logic
+- Don't assign variables in conditional statements. It will look confusing.
+- DON'T DO IT. EVER. YOU WILL REGRET IT
+
+Parameters and Iterators
+- Use underscores for unused parameters:
+ -> names.each { |_| puts 'example underscores.'}
+
+

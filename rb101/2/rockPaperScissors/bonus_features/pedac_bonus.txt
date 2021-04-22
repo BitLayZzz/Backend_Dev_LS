@@ -1,0 +1,76 @@
+This is a PEDAC guide for adding bonus features on the previous
+Rock, Paper, Scissors Game!
+
+PROBLEM
+--------
+Descriptions: Expand the original Rock Paper Scissors game to include Lizard
+and Spock. Typing the full word is tiring. Update the program so the user can type
+"r" for rock, "p" for paper, etc. (I added a number system instead so each options has it's own number option). Lastly, create a score tracking system to determine a winner. Whomever reaches five total wins, wins the over all game.
+
+Modified rules:
+Rock crushes lizard or scissors,
+Paper disproves Spock or covers rock
+Scissors decapitate Lizard or cuts paper,
+Lizard eats paper or poisons spock.
+Spock vaporizes rock or crushes scissors,
+
+Things to consider?
+Can player quit at anytime?
+What happens on tie rounds?
+What happens when user enters in the wrong number?
+What happens if PC chooses paper and User Chooses Lizard?
+
+EXAMPLES
+--------
+: 1 -> You chose rock | PC chose paper, PC wins this round: Usr 0 | PC 1
+: 4 -> You chose Lizard | PC chose paper, It's a Tie! Usr 0 | PC 1
+: 3 -> You Chose Scissors | PC chose spock, PC wins this round: Usr 0 | PC 2
+: 5 -> You chose Spock | PC chose scissors, You win this round: Usr 1 | PC 2
+...
+: 5 -> You chose spock | PC chose rock, You've Won! Usr 5 | PC 2, Play again?
+: -1 -> Quitting...goodbye for now!
+
+
+DATA STRUCTURES
+---------------
+- Numbers (ints)
+- Strings
+- Methods
+- Arrays and Ruby Hashes
+
+
+ALGORITHM
+----------
+- assign numbers to each choice
+ -> 1: rock, 2: paper, 3: scissors, 4: lizard, 5: spock, -1: quit game
+- initalize main loop
+ - initialize round assigned with 1
+ - initalize game loop (until player1 on or player2 reaches 5 wins, continue)
+  -> initialize user_score
+  -> initialize pc_score
+  -> output round
+  -> request user input, (-1, 1-5)
+  -> assign number between 1 & 5 to computer
+  -> send game to duel (3) parameters each player
+  -> if result of duel is You won!, increment usr_score by 1
+  -> if result of duel is I won!, increment pc_score by 1
+  -> if usr_score equals 5, declare usr winner and break
+  -> else if pc_score equals 5, declare pc winner and break
+  -> else, increment round by 1
+
+
+3 Duel Method
+
+ initialize result
+ - call round_winner? method w/ parameters usr, pc
+  -> if true, usr won this round,
+  -> assign usr to result
+ - call round_winner? method w/ parameters pc, usr
+  -> if true, pc won this round
+  -> assign pc to result
+ - if neither are true, declare the round a tie
+  -> assign tie to result
+
+CODE
+----
+in ruby

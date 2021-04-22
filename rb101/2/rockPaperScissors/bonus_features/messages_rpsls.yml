@@ -1,0 +1,21 @@
+# Rock Paper Scissors game prompts
+#
+en:
+  welcome:  "Rock, Paper, Scissors, Lizard, Spock!!!\n=> Can you beat me?"
+  choices:  "Enter a number to choose (-1 to quit game):
+     \n=> Rock(1)
+     \n=> Paper(2)
+     \n=> Scissors(3)
+     \n=> Lizard(4)
+     \n=> Spock(5)
+     \n=> Quit(-1)"
+  bad_choice: "That's not a Choice! Starting the round over"
+  no_choice:  "You didn't choose!...Starting the round over"
+  interlude:  "My turn to choose..."
+  round_won:  "You win this round!"
+  round_lost: "I win this round!"
+  tie: "It's a tie this round!"
+  game_won:  "User wins! You Beat Me!!!"
+  game_lost: "PC wins! I Beat You!!!"
+  play_again: "Type 'y' to play again (y)"
+  goodbye: "Thanks for playing. Goodbye!"
