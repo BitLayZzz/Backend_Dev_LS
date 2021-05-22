@@ -58,6 +58,8 @@ end
 
 # Main Loop
 loop do
+  system('clear')
+
   lang = 'en'
   user_score = 0
   pc_score = 0
