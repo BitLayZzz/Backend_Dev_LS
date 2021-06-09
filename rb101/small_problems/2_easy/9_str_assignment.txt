@@ -1,0 +1,8 @@
+name = 'Bob'
+save_name = name
+name.upcase!
+puts name, save_name
+
+The code above will output BOB, BOB because both variables point
+to the same object in memory. When we use upcase!, it permanently
+mutates the object in memory and thus any variables assigned to it.

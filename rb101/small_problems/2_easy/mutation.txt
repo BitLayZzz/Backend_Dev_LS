@@ -1,0 +1,32 @@
+array1 = %w(Moe Larry Curly Shemp Harpo Chico Groucho Zeppo)
+array2 = []
+array1.each { |value| array2 << value }
+array1.each { |value| value.upcase! if value.start_with?('C', 'S') }
+puts array2
+
+The code above will output:
+Moe
+Larry
+Curly
+Shemp
+Harpo
+Chico
+Groucho
+Zeppo
+
+Original Answer:
+This happens because array2 is a variable assigned an array object with a completely new memory address, When values are added to array2 in array1.each, the values are being copied to the new array in a different address space, thus not referencing the original array object.
+
+Wrong! Answer :/
+
+The correct answer is
+Moe
+Larry
+CURLY
+SHEMP
+Harpo
+CHICO
+Groucho
+Zeppo
+
+It turns out `<<` is actually an operation that passes by reference, and thus makes variable copies that also reference the original string object in the same memory space.
