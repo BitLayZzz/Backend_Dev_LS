@@ -1,0 +1,77 @@
+This document shows the answers as well as brief explanations
+to the Practice Problems: Easy 1 section
+
+Answer 1: Array#uniq is not a mutating method
+1
+2
+2
+3
+
+Answer 2:
+! usually represents negation or mutability in ruby, for example uniq!
+is a mutable method, meaning it permanently changes the object passed
+to it. b != c is a statement representing negation; is b NOT equal to c.
+
+? usually represents methods that return boolean objects; they ask if a statement is true or false.
+
+1 - != means NOT equal and should be used in comparison statements such as
+conditional statements
+
+2 - !user_name will negate the variable user_name,
+thus making it inherently "false" and return false
+
+3 - words.uniq! will make the variable "words" permanently changed assuming
+it is a mutable object.
+
+4 - a ? before a variable will change that variable to a string
+
+5 - a ? after a variable returns an error, but is conventially used
+at the end of a methods name to denote a boolean operation.
+
+6 - !! before something will return the boolean equivalent of the object
+In ruby, most common objects like strings and numerics are inherently truthy.
+
+
+Answer 3: string replacement
+advice.gsub!('important', 'urgent') will replace important with urgent
+
+
+Answer 4: numbers = [1, 2, 3, 4, 5]
+numbers.delete_at(1) will delete and return the variable at index 1
+while
+numbers.delete(1) will delete and return the first occurence of 1 in the array
+
+
+Answer 5: is 42 between 10 and 100
+(10..100).each { |n| puts 'I found 42!' if n == 42 }
+This is a simple, albeit maybe not the most effective way, to determining
+the answer. Range#cover is an even simpler way in ruby.
+
+
+Answer 6: prepending to a string
+famous_words = "seven years ago..."
+real_famous_words = "Four score and " + famous_words
+
+another option
+
+famous_words = "seven years ago..."
+famous_words.split('').unshift('Four score and ').join
+
+or simply
+
+famous_words = "seven years ago..."
+famous_words.prepend('Four Score and ')
+
+
+Answer 7: un-nesting multi-dimensional arrays
+["Fred", "Wilma",, ["Barney", "Betty"], ["BamBam", "Pebbles"]]
+["Fred", "Wilma",, ["Barney", "Betty"], ["BamBam", "Pebbles"]].flatten!
+flatten will create a one dimensional array
+
+Answer 8: hash to arr { "Fred" => 0, "Wilma" => 1, "Barney" => 2, "Betty" =>, "BamBam" => 4 }
+
+flintstones.select { |k, v| k == "Barney" }.to_a.flatten
+
+OR
+
+flintstones.assoc("Barney")
