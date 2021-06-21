@@ -1,0 +1,59 @@
+This documents covers the answers to Lesson 3 section Medium 1
+
+
+Answer 1: Beginning ASCII Art, moving spaces
+statement = "The Flintstones Rock!"
+
+10.times { puts statement.prepend(' ') }
+
+
+Answer 2: Fix the error
+puts "the value of 40 + 2 is " + (40 + 2)
+
+The above produces an error because you can't add strings to numerics.
+This can be fixed either by interpolating the numeric within the parentheses using
+#{} or by converting the numeric into a string after completing the equation.
+
+
+Answer 3: Fix the method
+break if divisor <= 0 or use a while loop
+
+Bonus 1 the modulo symbol % within number % divisor == 0 will return a value not
+equal to 0 when the value of number is not divisible by divisor
+
+Bonus 2 Line 8 implicitly returns the array at the end of the method
+
+
+
+Answer 4: string mutation vs reassignment
+Between the methods rolling_buffer1 and rolling_buffer2
+rolling_buffer1 would be the better choice because the string method <<
+appends the new variable to the already existing string where as
+the method += will reassign the variable to a new object space in memory.
+This will effectively change the input argument that was initially passed to
+the method
+
+Answer 5: global variables
+The code that was given in this problem will not run because the local variable
+`limit` was not passed into the fibonacci method. This can be solved either
+by passing the local variable into the method as an additional parameter
+or turning the local variable `limit` into a global variable `LIMIT`.
+
+
+Answer 6: what is the answer
+`p answer - 8` will return 34 because the variable was never changed.
+
+
+Answer 7: Hash mutation
+The family's data got ransacked because the Hash#each method and the Hash#[]
+method permanently changes variables within hashes.
+
+
+Answer 8: Nested Methods
+rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock")
+The result of the above will be "paper"
+
+
+Answer 9: implicit arguments
+bar(foo) will return no
+

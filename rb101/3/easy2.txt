@@ -1,0 +1,56 @@
+These are the answers as well as brief explanations to Lesson 3 section Easy 2
+
+
+Answer 1: Hash search
+ages = { "Herman" =>, "Lily" => 30, "Grandpa" => 402, "Eddie" => 10 }
+
+- ages.key? "Spot"
+- ages.has_key? "Spot"
+- ages.include? "Spot"
+
+
+Answer 2: string conversion
+munsters_description = "The Munsters are creepy in a good way."
+
+- munsters_description.swapcase!
+- munsters_description.capitalize!
+- munsters_description.downcase!
+- munsters_description.upcase!
+
+Answer 3: add values to hash
+additional_ages { "Marilyn" => 22, "Spot: => 237 }
+ages.merge!(additional_ages)
+
+
+Answer 4: string search
+advice = "Few things in life are as important as house training your pet dinosaur."
+- advice.include?("Dino")
+
+Answer 5: easier way to write array
+fintstones = ["Fred", "Barney", "Wilma", "Betty", "BamBam", "Pebbles"]
+or
+- flintstones = %W(fred barney wilma betty bambam pebbles).map(&:capitalize!)
+
+
+Answer 6: add value to array
+- flintstones.push("Dino")
+or
+- flintstones << "Dino"
+
+
+Answer 7: add multiple values to an array
+flintstones.push("Dino", "Hoppy")
+
+
+Answer 8: shorten sentences
+- advice.slice!(/Few things in life are as important as /)
+
+
+Answer 9: one-liner counters
+statement = "The Flintstones Rock!"
+count_ts = statement.count 't'
+
+
+Answer 10: center string
+title = "Flintstones Family Members"
+title.center(num)
