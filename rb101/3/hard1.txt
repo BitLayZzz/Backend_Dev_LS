@@ -1,0 +1,31 @@
+This document contains the answers and descriptions to Lesson 3 section Hard 1
+
+
+Answer 1: truthiness
+The code will return nil because, in ruby, a local variable is initialized,
+even if it's within a conditional that doesn't get executed.
+
+
+Answer 2: Object mutation
+The final answer will be the hash {a: 'hi there'} because although the overall
+hash object was not changed in memory, the string value contained under the key
+a was mutated by the reference variable informal_greeting.
+
+Answer 3: Driving home variable scope
+code group A will return
+'one is: one'
+'two is: two'
+three is: three'
+
+code group B will return
+'one is: one'
+'two is: two'
+'three is: three'
+
+code group C will return
+'one is: two'
+'two is: three'
+'three is: one'
+
+
+Answer 4: see ip_check.rb program in rb101/3 folder

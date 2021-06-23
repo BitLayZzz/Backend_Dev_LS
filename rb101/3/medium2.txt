@@ -1,0 +1,64 @@
+This document holds the answers and discussions to Lesson3 section Medium 2
+
+
+Answer 1: Object references in ruby
+a was assigned the int 42, b was assigned the string "forty two", c was assigned
+an array containing the int value 42 and d was assigned the int value 42 by
+taking the value at index 0 of the array c
+
+in this case a and d share the same object id, while c and b have different
+object id's than the other 3 variables
+
+once in side the #times iteration, each variable will be reassigned
+but will continue to have the same object id initially
+
+However further down in the #times iteration, each variable is reassigned
+to new objects that now contain completely different object_ids than the
+initial variable object_id's in the outer scope of the
+#times iteration
+
+Since the variables names are the same, and #times is not a method object passing,
+the values outside of the scope of the #times iteration will be changed
+
+At the very end, the inner variables will not exist outside the scope of #times
+unless they were initialized outside of it's scope.
+
+
+Answer 2: Object id's from a method instead of a block
+Although we are using the same exact logic when assigning and reassigning
+variables, this one will have an altered outcome because when reassigning
+the values a, b, c, d this will only hold true within the context of the
+methods scope, Methods take copies of references to objects as arguments
+and thus can be changed with out permanently changed the references outside
+the scope of the method innately.
+
+
+Answer 3: Passing Strings vs passing arrays part 1
+In this instance the trick_method returns an updated version of the array
+but not an updated version of the string parameter, and this is not due
+to the difference in data types, but to the difference in methods used to append
+values to the data types, += is a reassignment operation while << is a mutating
+operation.
+To also add, the array variable will also append the value within the method,
+as a new indexed value within the array
+
+
+Answer 4: Passing strings vs passing arrays part 2
+Once again, the data type string as well as the complex data type array both
+get treated similarly, but now the methods that are called on the object
+references are switched. Now, the originally referenced string object
+gets additional data appended to the end, while the referenced array variable gets
+reassigned to a new object in memory space, thus, disconnecting it from the
+originally referenced array object outside the scope of this method.
+
+
+Answer 5: Passing Strings vs passing arrays part 3
+The code can be more predictable by either implicitly return the new string
+or array objects, or even by just using only mutating methods, but it depends
+on what we are trying to accomplish in the given method. The most important thing
+is to write explicit code that is easy to read, debug, and modify
+
+
+Answer 6: ternary operator
+Method can be shortened with the following
+(color == "blue || color == "green") ? true : false
