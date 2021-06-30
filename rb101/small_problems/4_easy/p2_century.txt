@@ -1,0 +1,46 @@
+This is a short PEDAC doc for Small Problems Easy 4 problem 2
+
+PROBLEM
+
+description: Write a method that takes a year as input and returns the century.
+The return value should be a string that begins with the century number,
+and ends with st, nd, rd, or th as appropriate for that number.
+
+New centuries begin in years that end with 01. So, the years 1901-2000 comprise
+the 20th century.
+
+Things to consider: How would find a solution for all possible dates
+- must be a math problem
+- how would you handle suffixes for similar numbers (ex: 101st, 1st, 11th)
+- convert string of century to array maybe? or Just read chars?
+
+
+EXAMPLES
+century(2000) == '20th'
+century(5) == '1st'
+century(10103) == 102nd'
+century(11201) == '113th'
+
+
+DATA
+- arrays
+- strings
+- ints
+
+
+ALGORITHM
+CALL century method and pass variable YEAR into it as an int
+ADD 100 from YEAR and save as CENTURY
+CONVERT CENTURY from int to string
+CONVER CENTURY from string to array
+REMOVE last to indices from array CENTURY
+INITIALIZE conditional statement
+IF value of last index in CENTURY is 1 AND value second to last is NOT 1
+   then append 'st' to end of CENTURY
+ELSEIF value of last index in CENTURY is 2 AND value in second to last is NOT 1
+   then append 'nd' to end of CENTURY
+ELSEIF value of last index in CENTURY is 3 AND value in second to last is NOT 1
+   then append 'rd' to end of CENTURY
+END
+CONCAT array CENTURY to string
+RETURN CENTURY
